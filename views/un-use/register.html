@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assets/dashboard.css" />
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Vehicle Owner</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-3 bg-light col-lg-2 mr-0 px-3" href="#">Vahan Seva</a>
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+          <div class="sidebar-sticky pt-3">
+            <ul class="nav flex-column mt-3">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">
+                  <i class="fas fa-home mr-2"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="owner.html">
+                  <i class="fas fa-user-tie mr-2"></i>
+                  Owner
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="vehicle.html">
+                  <i class="fas fa-truck mr-2"></i>
+                  Vehicle
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="driver.html">
+                  <i class="fas fa-user mr-2"></i>
+                  Pilot
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="document.html">
+                  <i class="fas fa-file-pdf mr-2"></i>
+                  Document
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-file-pdf mr-2"></i>
+                  Activity Logs
+                </a>
+              </li>
+
+              <h6
+                class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-4 text-muted"
+              >
+                <span>Show Details</span>
+                <a
+                  class="d-flex align-items-center text-muted"
+                  href="#"
+                  aria-label="Add a new report"
+                >
+                  <i class="fas fa-eye"></i>
+                </a>
+              </h6>
+
+              <li class="nav-item">
+                <a class="nav-link" href="showDocument.php">
+                  <i class="fas fa-user-tie mr-2"></i>
+                  Owners
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="showVehicle.php">
+                  <i class="fas fa-truck mr-2"></i>
+                  Vehicles
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="showDriver.php">
+                  <i class="fas fa-user mr-2"></i>
+                  Pilots
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="showDocument.php">
+                  <i class="fas fa-file-pdf mr-2"></i>
+                  Documents
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="showUser.php">
+                  <i class="fas fa-user mr-2"></i>
+                  User
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-rupee-sign mr-2"></i>
+                  Payments
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 mb-5 px-md-4">
+          <form action="../models/insert/user.php" method="POST">
+            <div class="form-card pl-5 mb-3" style="border: none; border-top: 8px solid purple;">
+              <h2>Register</h2>
+            </div>
+            <div class="form-card p-5 mb-3">
+              <label>First Name <span>*</span> </label>
+              <input
+                type="text"
+                name="first_name"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <div class="form-card p-5 mb-3">
+              <label>Last Name <span>*</span> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="last_name"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <div class="form-card p-5 mb-3">
+              <label>Phone <span>*</span> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="phone"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <div class="form-card p-5 mb-3">
+              <label>Email</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <div class="form-card p-5 mb-3">
+              <label>Username</label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <div class="form-card p-5 mb-3">
+              <label>Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <div class="row btn-box">
+              <div class="col-md-6"></div>
+              <div class="col-md-6 d-flex justify-content-end">
+                <!-- <button type="button" class="btn btn-danger read-more">Cancel</button> -->
+                <!-- <button type="button" class="btn btn-success read-more ml-3">Add Owner</button> -->
+                <input class="btn btn-success" type="submit" value="Add User" />
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
